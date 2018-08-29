@@ -1,0 +1,278 @@
+html {
+    overflow: auto;
+}
+
+body {
+    font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: @body-primary-bg;
+    font-size: @fontsize-body;
+    color: @text-primary-black;
+}
+
+// panel框样式
+.panel-box-wrap-default {
+    box-shadow: 1px 1px 20px #E0E0E0;
+    background-color: #fff;
+}
+
+.full-box {
+    width: 100%;
+    height: 100%;
+}
+
+.full-width {
+    width: 100% !important;
+}
+
+.full-height {
+    height: 100%;;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.block {
+    display: block;
+}
+
+.clear {
+    display: block;
+    overflow: hidden;
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+ul.unstyled,
+ol.unstyled {
+    list-style: none outside none;
+    margin-left: 0;
+}
+
+/* text-ellipsis*/
+
+.text-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* line */
+
+.hr-line-dashed {
+    border-top: 1px dashed @border-color;
+    color: #ffffff;
+    background-color: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.hr-line-solid {
+    border-bottom: 1px solid @border-color;
+    background-color: rgba(0, 0, 0, 0);
+    border-style: solid !important;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* ibox */
+
+.ibox {
+    clear: both;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.ibox.collapsed .ibox-content {
+    display: none;
+}
+
+.ibox.collapsed .fa.fa-chevron-up:before {
+    content: "\f078";
+}
+
+.ibox.collapsed .fa.fa-chevron-down:before {
+    content: "\f077";
+}
+
+.ibox:after,
+.ibox:before {
+    display: table;
+}
+
+.ibox-title {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: @ibox-title-bg;
+    border-color: @border-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0 0;
+    color: @text-title-black;
+    font-size: @fontsize-body;
+    font-weight: bold;
+    margin-bottom: 0;
+    padding: 0 @base-interval * 2;
+    min-height: 40px;
+    line-height: 40px;
+}
+
+.ibox-content {
+    position: relative;
+    background-color: @ibox-content-bg;
+    color: inherit;
+    padding: @base-interval * 2;
+    border-color: @border-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 0;
+    &.full-height {
+        min-height: calc(~"100vh - 220px");
+    }
+}
+
+.ibox-footer {
+    color: inherit;
+    border-top: 1px solid @border-color;
+    font-size: 90%;
+    background: #ffffff;
+    padding: 10px 15px;
+}
+
+.ibox-content {
+    clear: both;
+}
+
+.ibox-content.noclear {
+    clear: none;
+}
+
+.ibox-heading {
+    background-color: #f3f6fb;
+    border-bottom: none;
+}
+
+.ibox-heading h3 {
+    font-weight: inherit;
+    font-size: 24px;
+}
+
+.ibox-title h5 {
+    display: inline-block;
+    font-weight: inherit;
+    text-overflow: ellipsis;
+}
+
+.ibox-title .label {
+    float: left;
+    margin-left: 4px;
+}
+
+.ibox-tools {
+    display: block;
+    float: none;
+    margin-top: 0;
+    position: relative;
+    padding: 0;
+    text-align: right;
+}
+
+.ibox-tools a {
+    cursor: pointer;
+    margin-left: 5px;
+    color: inherit;
+}
+
+.ibox-tools a.btn-primary {
+    color: #fff;
+}
+
+.ibox-tools .dropdown-menu>li>a {
+    padding: 4px 10px;
+    font-size: 12px;
+}
+
+.ibox .ibox-tools.open>.dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+
+/* line-height */
+
+.l-h-sm {
+    line-height: 20px;
+}
+
+.l-h-md {
+    line-height: 32px;
+}
+
+.l-h-l {
+    line-height: 60px;
+}
+
+/* height */
+
+.main-content-height {
+    min-height: calc(~"100vh - @{header-height} - @{footer-height} - @{app-nav-height}");
+}
+
+.height-100-precent {
+    height: 100%;
+}
+
+
+// IMAGES SIZE
+.img-xs {
+    width: 25px;
+    height: 25px;
+}
+
+.img-sm {
+    width: 32px;
+    height: 32px;
+}
+
+.img-md {
+    width: 64px;
+    height: 64px;
+}
+
+.img-lg {
+    width: 96px;
+    height: 96px;
+}
+
+// 让块级元素居中
+.center-block {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-center-block {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-center-block {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

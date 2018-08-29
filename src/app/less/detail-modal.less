@@ -1,0 +1,53 @@
+.detail-modal-wrap {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+    .detail-modal-content {
+        position: absolute;
+        width: 666px;
+        max-width: 800px;
+        overflow: auto;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+
+        >.ibox-content {
+            max-height: calc(~"100vh - 160px");
+            overflow: auto;
+        }
+        
+        .detail-modal-close {
+            display: block;
+            float: right;
+            cursor: pointer;
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            margin-top: 7px;
+            &:before {
+                content: '\D7';
+                display: block;
+                font-family: Helvetica, Arial, sans-serif;
+                cursor: pointer;
+                font-size: 22px;
+                line-height: 26px;
+                color: #bbb;
+            }
+            &:hover {
+                background: #EBEBEB;
+                border-radius: 50%;
+
+                &:before {
+                    color: #777
+                }
+                
+            }
+        }
+    }
+}

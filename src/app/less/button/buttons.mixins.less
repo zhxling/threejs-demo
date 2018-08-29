@@ -1,0 +1,81 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus,
+  &.focus {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 25%);
+  }
+  &:hover {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 10%);
+        border-color: darken(@border, 12%);
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @color;
+      background-color: darken(@background, 17%);
+          border-color: darken(@border, 25%);
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+// Button sizes
+.button-size(@width; @height; @font-size; @border-radius) {
+  min-width: @width;
+  height: @height;
+  line-height: @height - 2px;
+  padding: 0 @base-interval;
+  font-size: @font-size;
+  border-radius: @border-radius;
+
+  &.btn-icon-only {
+    min-width: @height;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  &.btn-icon-left {
+    padding-left: @font-size + @base-interval * 2;
+  }
+
+  &.btn-icon-right {
+    padding-right: @font-size + @base-interval * 2;
+  }
+}

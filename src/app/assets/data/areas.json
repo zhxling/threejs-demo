@@ -1,0 +1,263 @@
+[
+    {
+        "id": 1,
+        "name": "厂区",
+        "type": 0,
+        "imageUrl": "assets/images/all.svg",
+        "parentId": null,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 2,
+        "name": "行政办公楼",
+        "type": 1,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 3,
+        "name": "行政办公楼首层",
+        "type": 0,
+        "imageUrl": "assets/images/office-f1.svg",
+        "parentId": 2,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 4,
+        "name": "行政办公楼二层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 2,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 5,
+        "name": "行政办公楼三层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 2,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 6,
+        "name": "行政办公楼四层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 2,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 7,
+        "name": "主厂房",
+        "type": 1,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 8,
+        "name": "主厂房0米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 7,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 9,
+        "name": "主厂房4米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 7,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 10,
+        "name": "主厂房7米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 7,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 11,
+        "name": "主厂房11米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 7,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 12,
+        "name": "集控楼",
+        "type": 1,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 13,
+        "name": "集控楼0米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 12,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 14,
+        "name": "集控楼5.6米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 12,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 15,
+        "name": "集控楼11米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 12,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 16,
+        "name": "化水车间",
+        "type": 1,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 17,
+        "name": "化水车间0米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 16,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 18,
+        "name": "化水车间4.5米层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 16,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 19,
+        "name": "联合车间",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 20,
+        "name": "检修车间及材料库",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 21,
+        "name": "联合车间",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 22,
+        "name": "检修楼",
+        "type": 1,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 23,
+        "name": "检修楼首层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 22,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 24,
+        "name": "检修楼二层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 22,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 25,
+        "name": "检修楼三层",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 22,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 26,
+        "name": "循环水泵房",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 27,
+        "name": "调压站",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 28,
+        "name": "净水站",
+        "type": 0,
+        "imageUrl": "",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    },
+    {
+        "id": 29,
+        "name": "工业废水车间",
+        "type": 0,
+        "imageUrl": "assets/images/waste-water.svg",
+        "parentId": 1,
+        "pathName": "",
+        "description": ""
+    }
+]

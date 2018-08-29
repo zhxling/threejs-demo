@@ -1,0 +1,122 @@
+@default-panel-bg-color: #fff;
+@default-panel-title-bg-color: #fff;
+@border-color: #ccc;
+@footer-height: 61px;
+@app-nav-height: 46px;
+
+.lbox-wrap {
+    .lbox-title {
+        font-size: 16px;
+        padding: 15px 20px;
+        background: @default-panel-title-bg-color;
+        border-bottom: 1px solid @border-color;
+    }
+
+    .lbox-content {
+        height: calc(~"100vh - 220px");
+        background: @default-panel-bg-color;
+        padding: 20px;
+        clear: both;
+        overflow: hidden;
+
+        [class^="lbox-col-"], [class*=" lbox-col-"] {
+            font-size: 12px;
+            float: left;
+            border-left: 10px solid @default-panel-bg-color;
+            border-right: 10px solid @default-panel-bg-color;
+            // box-shadow: 0 0 0 1px @border-color inset;
+        }
+
+        [class^="lbox-col-"]:first-of-type, [class*=" lbox-col-"]:first-of-type {
+            border-left: 0;
+        }
+
+        [class^="lbox-col-"]:last-of-type, [class*=" lbox-col-"]:last-of-type {
+            border-right: 0;
+        }
+        .lbox-col-1 {
+            width: 8.3333333%;
+        }
+
+        .lbox-col-2 {
+            width: 16.66666667%;
+        }
+
+        .lbox-col-3 {
+            width: 25;
+        }
+
+        .lbox-col-4 {
+            width: 33.3333333%;
+        }
+
+        .lbox-col-5 {
+            width: 41.6666667%;
+        }
+
+        .lbox-col-6 {
+            width: 50%;
+        }
+
+        .lbox-col-7 {
+            width: 58.3333333%;
+        }
+
+        .lbox-col-8 {
+            width: 66.6666667%;
+        }
+    }
+}
+
+/**/
+ .same-height-wrap {
+    overflow:hidden;/*// (这行代码是重点，否则你会看到页面很长很长)*/
+
+    .same-height-item {
+        height:auto;
+        margin-bottom:-10000px;/*（外补丁）*/
+        padding-bottom:10000px;/*（内补丁）*/
+    }
+ }
+
+
+.panel-white {
+    border-color: #ddd;
+    >.panel-heading {
+        background-color: #fff;
+        color: #333333;
+        border-color: #ddd;
+    }
+}
+
+
+/* START 非子系统，如报警管理列表页的布局*/
+[horizontal-nav] + .app-list-wrap {
+    min-height: calc(~"100vh - @{header-height} - @{footer-height} - @{app-nav-height}");
+    background: #fff;
+}
+
+.list-wrap-default {
+    padding: @base-interval * 2;
+    background: #fff;
+    .list-hearder {
+        position: relative;
+        padding: @base-interval * 2 0 @base-interval;
+        
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+        
+        >.count {
+            float: left;
+            margin-top: 10px;
+        }
+        >.btn-group, >.list-btn-group {
+            text-align: right;
+        }
+    }
+    .list-content {
+    }
+}
+/* END 非子系统，如报警管理列表页的布局*/

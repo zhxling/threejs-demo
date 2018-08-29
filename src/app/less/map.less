@@ -1,0 +1,64 @@
+.map-content {
+    /* 子系统地图panel */
+    height: 60vh;
+    .panel-box-wrap-default;
+    
+    .contour {
+        cursor: pointer;
+        &.disable {
+            cursor: not-allowed;
+        }
+
+        &.zoom-in {
+            cursor: url('../assets/images/icon/zoom-in.png'), zoom-in;
+            cursor: url('../assets/images/icon/zoom-in.ico'), zoom-in;
+        }
+    }
+}
+
+.map-zones-modal {
+    position: fixed;
+    z-index: 100000;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    min-width: 100px;
+    color: #fff;
+
+    .map-zones-header {
+        border-bottom: 1px solid #ccc;
+        padding: 4px 10px;
+    }
+
+    ul {
+        padding: 10px;
+        li {
+            a {
+                color: #fff;
+            }
+            &:hover {
+                border-radius: 3px;
+                padding: 4px;
+                background: @primary;
+
+                a {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 6px;
+        top: 6px;
+        opacity: 1;
+        color: #fff;
+        font-size: 16px;
+
+        &:hover {
+            background: #ccc;
+            border-radius: 50%;
+            color: @danger;
+        }
+    }
+}

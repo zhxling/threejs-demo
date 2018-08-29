@@ -1,0 +1,284 @@
+.dd {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+  list-style: none;
+  font-size: 12px;
+  line-height: 20px;
+}
+.dd-list {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-left: 30px;
+  list-style: none;
+}
+.dd-list:before {
+  content: '';
+  width: 1px;
+  z-index: 1;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 16px;
+  left: 12px;
+  border-left: 1px dotted #454545;
+}
+
+.dd-list.dd-no-header-line {
+  padding:0 10px;
+}
+
+.dd-list.dd-no-header-line:before,
+.dd-list.dd-no-header-line>li:last-child:after,
+.dd-list.dd-no-header-line>li:first-child>.dd-content-row .dd-handle:before{
+  display: none;
+}
+
+//  {
+//   display: none;
+// }
+
+.dd-list  .dd-list:before {
+  top: -10px;
+}
+
+.dd-list>li:last-child:after {
+    content: '';
+    width: 1px;
+    z-index: 1;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: -18px;
+    border-left: 1px solid #fff;
+}
+.dd-list .dd-list {
+  padding-left: 30px;
+}
+.dd-item {
+  min-width: 100px;
+}
+.dd-item,
+.dd-empty,
+.dd-placeholder {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 20px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.dd-item.disabled>.dd-content-row,
+.dd-item.disabled>.dd-content-row .dd-handle,
+.dd-item.disabled>.dd-content-row .dd-content{
+  color: #ccc;
+  cursor: not-allowed;
+}
+.dd-handle {
+  display: block;
+  height: 30px;
+  margin: 5px 0;
+  padding: 5px 5px 5px 10px;
+  text-decoration: none;
+  cursor: move;
+  white-space: nowrap;
+}
+.dd-handle:before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: -16px;
+  width: 22px;
+  height: 0;
+  border-top: 1px dotted #454545;
+  z-index: 1;
+}
+.dd-content {
+  cursor: pointer;
+}
+.dd-content-row:hover>.dd-handle,
+.dd-content-row:hover>button,
+.dd-content-row:hover>.checkbox,
+.dd-content-row:hover>.dd-actions,
+.dd-active>.dd-content-row>.dd-handle,
+.dd-active>.dd-content-row>button,
+.dd-active>.dd-content-row>.checkbox,
+.dd-active>.dd-content-row>.dd-actions{
+  color: #fff !important;
+  background-color: #236b9b;
+}
+.dd-content-row:hover>.dd-actions{
+  color: #fff;
+  display: inline-block;
+}
+
+ol li.dd-item div:hover{
+  background-color: transparent;
+}
+
+[data-type="leaf"].dd-item>.dd-content-row > button {
+  display: none !important;
+}
+.dd-item .dd-content-row > button {
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin: 5px;
+  padding: 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+}
+.dd-item .dd-content-row > button:before {
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  text-align: center;
+  text-indent: 0;
+}
+[data-type="branch"].dd-item>.dd-content-row > button.dd-expand:before {
+  content: '';
+  border-top: 5px solid #585454;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+[data-type="branch"].dd-item>.dd-content-row > button.dd-collapse:before {
+  content: '';
+  border-bottom: 5px solid #585454;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.dd-expand {
+  display: none;
+}
+.dd-collapsed .dd-list,
+.dd-collapsed .dd-collapse {
+  display: none;
+}
+.dd-collapsed .dd-expand {
+  display: block;
+}
+.dd-empty,
+.dd-placeholder {
+  margin: 5px 0;
+  padding: 0;
+  min-height: 30px;
+  background: #f2fbff;
+  border: 1px dashed #b6bcbf;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.dd-empty {
+  border: 1px dashed #bbb;
+  min-height: 100px;
+  background-color: #e5e5e5;
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+}
+.dd-dragel {
+  position: absolute;
+  pointer-events: none;
+  z-index: 9999;
+}
+.dd-dragel > .dd-item .dd-handle {
+  margin-top: 0;
+}
+.dd-dragel .dd-handle {
+  box-shadow: 2px 4px 6px 0 rgba(0,0,0,.1);
+  position: relative;
+}
+
+.dd-nochildren .dd-placeholder {
+  display: none;
+}
+
+.dd-actions{
+  display: none;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  margin-top: 6px;
+}
+
+.dd-item .checkbox {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.dd-item .dd-content-row>.checkbox {
+  float: right;
+  padding-top: 0px;
+  min-height: 17px;
+}
+.dd-item .checkbox input[type="checkbox"] {
+  margin-left: -19px;
+  top: 4px;
+  width: 17px;
+  height: 17px;
+}
+.dd-item .checkbox label:after{
+  top: -2px;
+}
+.dd-item .checkbox label {
+  position: relative;
+  top: 4px;
+  padding-left: 1px;
+  min-height: 17px;
+}
+
+
+.dd-actions button{
+  width: 18px;
+  height: 18px;
+  padding: 0px;
+  padding-top: 1px;
+  margin-right: 5px;
+  border: 0;
+  background: transparent;
+}
+.dd-search{
+  position: relative;
+  margin: 10px;
+}
+.dd-search .dd-left-inputBox+.leafCheckbox {
+   position: absolute;
+   right: 0px;
+   top: -2px;
+   font-size: 12px;
+}
+.dd-search #dd-search-checkbox {
+  margin-left: 0px;
+}
+.dd-search #dd-search-checkbox+label{
+  line-height: 20px;
+}
+
+.dd-left-inputBox{
+  margin-right: 90px;
+}
+
+.dd-addRootBtn {
+  padding: 0px 10px 5px;
+  text-align: right;
+}
+
+.dd-addRootBtn .dd-addRootBtn-contend{
+  cursor: pointer;
+}
+
+.dd-addRootBtn .dd-addRootBtn-contend>i {
+  margin-right: 5px;
+}

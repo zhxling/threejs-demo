@@ -1,0 +1,85 @@
+@nav-second-safety-bg: #28A6C8;
+@nav-second-operations-bg: #65C1DD;
+@nav-second-fire-bg: #E57221;
+@nav-second-production-bg: #E9A217;
+@nav-second-device-bg: #995189;
+@nav-third-bg: #ccc;
+.bg-color(@bgColor, @color) {
+    background-color: @bgColor  !important;
+    color: @color !important;
+}
+
+.bg-safety {
+    background-color: @nav-second-safety-bg;
+}
+
+.bg-operations {
+    background-color: @nav-second-operations-bg;
+}
+
+.bg-fire {
+    background-color: @nav-second-fire-bg;
+}
+
+.bg-device {
+    background-color: @nav-second-device-bg;
+}
+
+.bg-production {
+    background-color: @nav-second-production-bg;
+}
+
+.menu-third-bg {
+    .bg-color(@bg-dark, @text-primary-white);
+}
+
+.menu-left-select {
+    .bg-color(@menu-left-select-bg, @text-primary-white);
+}
+
+.bg-white {
+    .bg-color(@bg-white, @text-primary-black);
+}
+
+.bg-smoke {
+    .bg-color(@bg-smoke, @text-primary-black);
+}
+
+.bg-dark {
+    .bg-color(@bg-dark, @text-primary-white);
+}
+
+.bg-black {
+    .bg-color(@bg-black, @text-primary-white);
+}
+
+.bg-primary {
+    .bg-color(@brand-primary, @text-primary-white);
+}
+
+.bg-warn {
+    .bg-color(@ui-warn, @text-primary-white);
+}
+
+.bg-danger {
+    .bg-color( @ui-error, @text-primary-white);
+}
+
+.bg-card {
+    background: #f3f7ee !important;
+}
+
+.bg-highEndAsh {
+    background: @high-end-ash;
+    color: #fff;
+}
+
+.bg-title-bar {
+    background: lighten(@high-end-ash, 40%);
+    color: @primary-color;
+}
+
+.bg-popup-content {
+    background: @body-primary-bg;
+    color: @primary-color;
+}

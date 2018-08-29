@@ -1,0 +1,39 @@
+label.required {
+    &::before {
+        content: '*';
+        margin-right: 5px;
+        color: @danger;
+    }
+
+}
+
+.ng-invalid.ng-touched {
+    border: 1px solid @ui-error;
+
+    &[select2] ~ span.select2-container  {
+        .select2-selection {
+            border: 1px solid @ui-error;
+        }
+    }
+}
+.form-invalid-block {
+    margin-top: 5px;
+
+    .form-invalid-item {
+        font-size: 12px;
+        color: @ui-error;
+        &::before {
+            content: "!";
+            display: inline-block;
+            width: 14px; 
+            height: 14px;
+            line-height: 14px;
+            text-align: center;
+            color: #fff;
+            font-size: 12px;
+            background: @ui-error;
+            margin: 5px;
+            border-radius: 50%;
+        }
+    }
+}

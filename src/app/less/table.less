@@ -1,0 +1,152 @@
+/* table */
+
+tbody th {
+    background: #dce9f9;
+}
+
+td,
+th {
+    color: black;
+}
+
+.table-with-border-radius {
+    border-radius: 6px;
+    border-collapse: separate;
+    border: 1px solid @local-border-color;
+    tr {
+        th,
+        td {
+            border: 1px solid @local-border-color;
+        }
+    }
+    tr:nth-child(2n+1) {
+        td {
+            background: #F5F5F5;
+        }
+    }
+    tr:hover {
+        td,
+        th {
+            background: #D5D5D5;
+        }
+    }
+    tr:nth-child(n+2) {
+        th,
+        td {
+            border-top: none;
+        }
+    }
+    tr td {
+        border-left: none !important;
+    }
+}
+
+.dt-table {
+    position: relative;
+    border-radius: 5px;
+    thead {
+        tr {
+            th {
+                text-align: center;
+                background: #4C5C73;
+                color: #fff !important;
+
+                border-color: #4C5C73;
+                border-bottom: none;
+                border-top: 1px solid #4C5C73 !important;
+                &:not(:last-of-type) {
+                    border-right-color: #FDFCFF;
+                }
+                // &:first-of-type {
+                //     border-top-left-radius: 5px;
+                // }
+                // &:last-of-type {
+                //     border-top-right-radius: 5px;
+                // }
+            }
+        }
+    }
+    tbody {
+        tr {
+            &:nth-of-type(even) {
+                background-color: #ececec;
+            }
+            &:nth-of-type(odd) {
+                background-color: #fff;
+            }
+            &:hover {
+                background-color: #dfe3e4;
+            }
+        }
+    }
+    tfoot {
+        // 表格数据为空时
+        &.table-empty {
+            position: relative;
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 39px;
+                right: -1px;
+                bottom: -1px;
+                background: #ececec;
+                border: 1px solid #ccc;
+                z-index: 1;
+            }
+            &:after {
+                content: '无数据';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: rotate(-30deg);
+                font-size: 22px;
+                color: @ui-error;
+                letter-spacing: 5px;
+                z-index: 1;
+            }
+        }
+        // 表格数据加载中时
+        >.table-loading {
+            .base-loading-layer {
+                left: 0px;
+                top: 39px;
+                right: -1px;
+                bottom: -1px;
+                background: #ececec;
+                border: 1px solid #ccc;
+            }
+        }
+        &.odd {
+            tr {
+                &:nth-of-type(even) {
+                    background-color: #ececec;
+                }
+                &:nth-of-type(odd) {
+                    background-color: #fff;
+                }
+            }
+        }
+        tr {
+            &:nth-of-type(even) {
+                background-color: #fff;
+            }
+            &:nth-of-type(odd) {
+                background-color: #ececec;
+            }
+        }
+    }
+    td {
+        text-align: center;
+        border-color: #FDFCFF;
+        padding: 8px;
+        height: 38px; // line-height: 1; 
+
+    }
+
+    &.table-condensed {
+        td {
+            height:20px;
+        }
+    }
+}

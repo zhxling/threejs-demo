@@ -1,0 +1,128 @@
+.nowrap {
+  white-space: nowrap;
+}
+
+/* sigle-text-ellipsis */
+.sigle-text-ellipsis {
+  display: inline-block;
+  padding: 0px 25px 0px 5px;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ng-dialog */
+.header-title{
+  padding: 0px;
+  margin: 5px 20px 15px 20px;
+  font-size: 16px;
+  background: transprent;
+  font-weight: bolder;
+}
+
+.margin-content{
+  margin:0px 20px 25px 20px;
+}
+
+
+.box-with-border{
+  border: 1px solid @local-border-color;
+  background: white;
+}
+
+.handle-width-3{
+  width: 120px
+}
+.handle-width-4{
+  width: 160px
+}
+
+/* position */
+.p-relative {
+  position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+/* display */
+.inline-block {
+  display: inline-block;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+
+/* cursor & hover-bg */
+.btn-icon-toggle:hover, .dropdown-toggle:hover{
+  cursor: pointer;
+  background-color: @body-primary-bg;
+}
+
+.btn-icon-toggle {
+    font-size: 20px;
+    width: 40px;
+    padding: 10px 0px;
+    text-align: center;
+    border-radius: 999px !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* input serch */
+.search-input-group {
+  position: relative;
+
+  input{
+    padding-right: 24px;
+  }
+
+  label {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 14px;
+    transform: translateY(-50%);
+  }
+
+  input:focus+label {
+    color: @title-color;
+  }
+}
+
+/* title */
+.middle-title {
+  color: #333;
+  font-size: 16px;
+}
+
+.small-title {
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* cursor */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//
+.dragBox {
+  .dragItem {
+    cursor: move;
+    &:hover {
+      .bg-primary;
+    }
+  }
+}

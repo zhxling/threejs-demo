@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "kks": "kks12jhu",
+        "code": "22399876",
+        "state": 2,
+        "type": 103,
+        "running_state": 0,
+        "name": "门禁01",
+        "e_loc1":"厂区大门",
+        "e_date":"2017-01-12",
+        "cat": "ACS",
+        "m_user_id":"张一山",
+        "spec":"CALEM-280LED单门",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 2,
+        "kks": 2,
+        "name": "摄像头02",
+        "e_loc1":"厂区大门",
+        "e_date":"2017-01-12",
+        "cat": "camera",
+        "m_user_id":"王新",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 1
+        }
+    },
+    {
+        "id": 3,
+        "kks": 3,
+        "name": "门禁03",
+        "e_loc1":"厂区-办公楼大门",
+        "e_date":"2017-01-02",
+        "cat": "ACS",
+        "m_user_id":"王山",
+        "spec":"CALEM-280LED单门",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 4,
+        "kks": 4,
+        "name": "摄像头04",
+        "e_loc1":"厂区-办公楼大门",
+        "e_date":"2017-01-02",
+        "cat": "camera",
+        "m_user_id":"张王",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 1
+        }
+    },
+    {
+        "id": 5,
+        "kks": 5,
+        "name": "门禁05",
+        "e_loc1":"厂区-废水楼大门",
+        "e_date":"2017-03-23",
+        "cat": "ACS",
+        "m_user_id":"王新",
+        "spec":"CALEM-280LED单门",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 6,
+        "kks": 6,
+        "name": "摄像头06",
+        "e_loc1":"厂区-废水楼大门",
+        "e_date":"2017-02-02",
+        "cat": "camera",
+        "m_user_id":"张一山",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 1
+        }
+    },
+    {
+        "id": 7,
+        "kks": 7,
+        "name": "门禁07",
+        "e_loc1":"厂区-废水楼大门",
+        "e_date":"2017-01-22",
+        "cat": "ACS",
+        "m_user_id":"张新",
+        "spec":"CALEM-280LED单门",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 8,
+        "kks": 8,
+        "name": "摄像头08",
+        "e_loc1":"厂区-废水楼大门",
+        "e_date":"2017-01-22",
+        "cat": "camera",
+        "m_user_id":"张新",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 9,
+        "kks": 9,
+        "name": "摄像头09",
+        "e_loc1":"厂区-废水楼大门",
+        "e_date":"2017-01-02",
+        "cat": "camera",
+        "m_user_id":"张一山",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 10,
+        "kks": 10,
+        "name": "摄像头10",
+        "e_loc1":"厂区-办公楼-大厅-左上角",
+        "e_date":"2017-01-23",
+        "cat": "camera",
+        "m_user_id":"王新",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 11,
+        "kks": 11,
+        "name": "摄像头11",
+        "e_loc1":"厂区-办公楼-大厅-右上角",
+        "e_date":"2017-04-05",
+        "cat": "camera",
+        "m_user_id":"李明",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 1
+        }
+    },
+    {
+        "id": 12,
+        "kks": 12,
+        "name": "摄像头12",
+        "e_loc1": "厂区-办公楼-大厅-左后角",
+        "e_date":"2017-01-05",
+        "cat": "camera",
+        "m_user_id":"李明",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 0
+        }
+    },
+    {
+        "id": 13,
+        "kks": 13,
+        "name": "摄像头13",
+        "e_loc1":"厂区-废水楼-罗茨风机房-左后角",
+        "e_date":"2017-02-04",
+        "cat": "camera",
+        "m_user_id":"张一山",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 1
+        }
+    },
+    {
+        "id": 14,
+        "kks": 14,
+        "name": "摄像头14",
+        "e_loc1":"厂区-废水楼-罗茨风机房-左后角",
+        "e_date":"2017-02-04",
+        "cat": "camera",
+        "m_user_id":"张一山",
+        "spec":"HCC-745P-A",
+        "manu":"honeywell",
+        "details": {
+            "state": 1
+        }
+    }
+]

@@ -1,0 +1,6 @@
+<ol class="breadcrumb bg-primary">
+    <li ng-repeat="nav in vm.breadcrumbs" ng-if="$last">
+        <a ng-if="!$last" ui-sref="{{nav.link}}"><i class="{{nav.icon}}" ng-class="{'m-r-xs': nav.icon}"></i>{{nav.text}}</a>
+        <span ng-if="$last"><i class="{{nav.icon}}" ng-class="{'m-r-xs': nav.icon}"></i>{{nav.text}}</span>
+    </li>
+</ol>

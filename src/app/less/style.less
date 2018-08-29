@@ -1,0 +1,83 @@
+/*
+ *
+ *   INSPINIA - Responsive Admin Theme
+ *   version 2.7.1
+ *
+*/
+// plug-video.js.less
+@import "plug-video-js.less";
+// Google Fonts
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+
+@import "init.less";
+@import "plug-change-style.less";
+// Variables, Mixins
+@import "variables.less";
+@import "mixins.less";
+
+// INSPINIA Theme Elements
+
+@import "base.less";
+@import "bg-color.less";
+
+// Media query style
+@import "media.less";
+
+//components
+@import "sweetalert.less";
+@import "table.less";
+
+
+// Custom style
+// Your custom style to override base style
+@import "custom.less";
+
+//　布局文件
+@import "layout.less";
+
+//　布局文件
+@import "dialog.less";
+
+//　fileInput文件
+@import "fileinput.less";
+
+//　select2文件
+@import "select2.less";
+
+@import "font-size.less";
+@import "font-color.less";
+@import "margin.less";
+@import "padding.less";
+@import "border.less";
+@import "border-radius.less";
+
+//　功能模块里的增改查模态窗样式文件
+@import "detail-modal.less";
+
+// 表单验证反馈
+@import "form-invalid-block.less";
+
+// 地图相关的一些样式
+@import "map.less";
+
+// 按钮样式
+@import "./button/buttons.less";
+@import "./button/button-groups.less";
+@import "badge.less";
+
+// 表单样式
+@import "form.less";
+
+
+// Clear layout on print mode
+@media print {
+  nav.navbar-static-side {
+    display: none;
+  }
+
+  body { overflow: visible !important; }
+
+  #page-wrapper {
+    margin: 0;
+  }
+}

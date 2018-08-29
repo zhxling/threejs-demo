@@ -1,0 +1,8 @@
+<div class="historyTab-bar">
+    <div ng-repeat="nav in vm.navs" class="historyTab-item" ng-class="{'active': vm.$state.current.name == nav.name}" ui-sref="{{nav.link}}">
+        <div class="left-radiu"></div>
+        <span class="text"><i class="{{nav.icon}}" ng-class="{'m-r-xs': nav.icon}"></i>{{nav.text}}</span>
+        <i class="remove-tab glyphicon glyphicon-remove" ng-click="vm.deleteItem($event, $index)"></i>
+        <div class="right-radiu"></div>
+    </div>
+</div>

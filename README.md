@@ -1,3 +1,17 @@
+# threejs-demo
+### Quick Start
+
+```bash
+
+git clone https://github.com/zhxling/threejs-demo.git
+cd threejs-demo
+npm install
+
+start  with npm serve
+Build with npm run build
+
+```
+
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/zhxling/threejs-demo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.

@@ -1,0 +1,10 @@
+highchart {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+highchart>.highcharts-container {
+	width: 100% !important;
+	height: 100% !important;
+}

@@ -1,0 +1,20 @@
+<div class="layout">
+    <!-- Header -->
+    <div class="header-view" ui-view='header'></div>
+    <!-- Navigation -->
+    <div class="content">
+        <div class="sidebar-view" ui-view='sidebar'></div>
+        
+        <!-- Page wraper -->
+        <!-- ng-class with current state name give you the ability to extended customization your view -->
+        <div id="page-wrapper" class="gray-bg {{$state.current.name}}">
+            <!-- Main view  -->
+            <!-- <div class="historyTab-view" ui-view="historyTab"></div> -->
+            <div class="breadcrumb-view" ui-view="breadcrumb"></div>
+            <div class="main-view" ui-view='main'></div>
+        </div>
+        <!-- Footer -->
+        <div class="footer-view" ui-view='footer'></div>
+    </div>
+    <!-- End page wrapper-->
+</div>

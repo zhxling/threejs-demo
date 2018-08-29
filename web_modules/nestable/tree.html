@@ -1,0 +1,99 @@
+ <!-- <div class="dd" data-ii='ss' id="nestable-json" style="margin-left: 20px; margin-top: 20px"></div> -->
+ <div nestable-tree nestable-option="vm.nestableOption"></div>
+<script>
+    var json = [
+        {
+            id:1,
+            name: 'team1',    // 必须项，用于tree显示节点名称
+            type: 'branch',    // 必须项，用于表明该节点的类型,值为：branch、leaf ; branch表示该节点为组节点，可包含leaf节点 ; leaf表明该节点为孤立节点
+            ddidentity: 44,  // 必须项，用于唯一身份标识
+            noAction: true,   // 可选项，表示节点右边是否需要btns
+            iconclass: 'icon-user', // 可选项，用于为节点添加图标，字体图标的类名
+            classes: '',  // 可选项，用于为节点添加类, 当为“dd-isolated”, 表明该节点为未分配组, 当tree中的leaf节点被删除时，如果该同名leaf节点不再存在于除了拥有“dd-isolated”类的节点组中，如果有拥有“dd-isolated”类的节点组,则把该被删除的leaf节点则被加入到“dd-isolated”类的节点组中
+            checked: true,  // 可选项，如果tree右边有checkboxBtn, 该值表明该节点该 checkbox的初始状态
+            editable: false, // 可选项，表明该节点是否可用，若为false,  则该节点处于不可用状态，所有右侧btn会被隐藏
+        },
+        {id:2, name: 'team2', checked: true, type:'branch',
+            children:[
+                {id:3, iconclass: 'icon-user',noAction:true, name: 'angel', iconclass: 'icon-user', type: 'leaf'},
+                {id:4, iconclass: 'icon-user', name: 'angelb', iconclass: 'icon-user', type: 'leaf'},
+            ]
+        },
+        {id:3, name: 'team3', authorized: false, type:'branch',
+            children:[
+                {id:1, iconclass: 'icon-user', name: 'aa', iconclass: 'icon-user', type: 'leaf'},
+                {id:2, iconclass: 'icon-user', name: 'bb', iconclass: 'icon-user', type: 'leaf'},
+                {id:4, name: 'team4', type:'branch'},
+                {id:5, name: 'team5', type:'branch',
+                    children:[
+                        {id:6, name: 'team6', type:'branch'},
+                        {id:7, name: 'team7', type:'branch'}
+                    ]
+                },
+            ]
+        }
+    ];
+    var options = {
+            json: $.extend(true, [], json),
+            branchRightBtns: {
+                btnGroup: {
+                    deleteBranchBtn : {
+                        // class:'icon-trash',    //  字体图标类名
+                        // onclick: function(element, promise) {
+                        //     var data = element.data();
+                        //     promise.resolve();
+                        // },
+                    },
+                    addBranchBtn: {
+                        // onclick: function(element, promise) {
+                        //     var data = element.data();
+                        //     promise.resolve();
+                        // },
+                    },
+                    addLeafBtn: {
+                        // onclick: function(element, promise) {
+                        //     var data = element.data();
+                        //     promise.resolve();
+                        // }
+                    },
+                    // checkboxBtn: {
+                    //     cascadeChecked: true,    // 可选，默认为true,是否要级联修改组下的leaf的checkbox,
+                    //     leafDisabled: false,    // 可选，默认为false, 当组的checkbox为false时，组下leaf是否会被禁用, 当cascadeChecked为true时，该属性才起作用
+                    //     asynCheck: false,  //是否需要等异步成功关联修改leaf节点, 当cascadeChecked为true时，该属性才起作用，默认false
+                    //     onclick: function(element, promise) {
+                    //         promise.resolve();
+                    //     },
+                    // }
+                }
+            },
+            leafRightBtns:  {
+                btnGroup: {
+                    deleteLeafBtn: {
+                        // onclick: function(element, promise) {
+                        //     var data = element.data();
+                        //     promise.resolve();
+                        // },
+                    },
+                    // checkboxBtn: {
+                    //     cascadeChecked: true,    // 可选，默认为true,是否要级联修改其父节点的checkbox,
+                    //     asynCheck: false,  // 可选，默认为false, 是否不需要等异步成功关联修改父节点的checkbox
+                    //     onclick: function(element, promise) {
+                    //         promise.resolve();
+                    //     },
+                    // }
+                }
+            },
+            isCollapsedAll: true,
+            searchable: true,
+            showLeafCheckbox: {
+                show: true,
+                value: true,
+                label: '显示成员',
+            },
+            onSelectRow: function(element, promise) {
+                promise.resolve();
+            },
+        };
+
+    this.nestableOption = options;
+</script>

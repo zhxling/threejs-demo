@@ -1,0 +1,99 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "snap.svg.zpd",
+        "scope": null,
+        "escapedName": "snap.svg.zpd",
+        "name": "snap.svg.zpd",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/alin/alinGulp/angular1.x-es6-webpack3-seed"
+    ]
+  ],
+  "_cnpm_publish_time": 1455681025742,
+  "_from": "snap.svg.zpd@latest",
+  "_hasShrinkwrap": false,
+  "_id": "snap.svg.zpd@0.0.11",
+  "_inCache": true,
+  "_location": "/snap.svg.zpd",
+  "_nodeVersion": "5.5.0",
+  "_npmOperationalInternal": {
+    "host": "packages-5-east.internal.npmjs.com",
+    "tmp": "tmp/snap.svg.zpd-0.0.11.tgz_1455681021765_0.05251644621603191"
+  },
+  "_npmUser": {
+    "name": "huei90",
+    "email": "huei90@gmail.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "snap.svg.zpd",
+    "scope": null,
+    "escapedName": "snap.svg.zpd",
+    "name": "snap.svg.zpd",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/snap.svg.zpd/download/snap.svg.zpd-0.0.11.tgz",
+  "_shasum": "ea48108d97c7538f049454301722924c2ed99425",
+  "_shrinkwrap": null,
+  "_spec": "snap.svg.zpd",
+  "_where": "/home/alin/alinGulp/angular1.x-es6-webpack3-seed",
+  "author": {
+    "name": "Huei Tan"
+  },
+  "bugs": {
+    "url": "https://github.com/huei90/snap.svg.zpd/issues"
+  },
+  "dependencies": {},
+  "description": "A zoom/pan/drag plugin for Snap.svg",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "ea48108d97c7538f049454301722924c2ed99425",
+    "size": 383922,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/snap.svg.zpd/download/snap.svg.zpd-0.0.11.tgz"
+  },
+  "gitHead": "c067a0208b4484d9cb6896a6d8c1e5de18d160c6",
+  "homepage": "https://github.com/huei90/snap.svg.zpd",
+  "keywords": [
+    "snapsvg",
+    "zoom",
+    "pan",
+    "drag",
+    "rotate",
+    "snap.svg",
+    "snap.svg plugin",
+    "plugin"
+  ],
+  "license": "BSD",
+  "main": "snap.svg.zpd.js",
+  "maintainers": [
+    {
+      "name": "huei90",
+      "email": "huei90@gmail.com"
+    }
+  ],
+  "name": "snap.svg.zpd",
+  "optionalDependencies": {},
+  "publish_time": 1455681025742,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huei90/snap.svg.zpd.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.11"
+}

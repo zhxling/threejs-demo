@@ -1,0 +1,30 @@
+.ngdialog.ngdialog-theme-white {
+    .ngdialog-content {
+        background: #fff;
+    }
+}
+
+.ngdialog {
+    &.ngdialog-theme-default {
+        .ngdialog-content {
+            padding: 0;
+
+            >button[aria-label="Dismiss"] {
+                top: 8px;
+                right: 10px;
+                width: 26px;
+                height: 26px;
+                // line-height: 22px;
+
+                &:before {
+                    font-size: 22px;
+                }
+
+                &:hover {
+                    background: #EBEBEB;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}

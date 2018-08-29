@@ -1,0 +1,58 @@
+label {
+    font-weight: normal;
+    color: @text-title-black;
+}
+
+::-webkit-input-placeholder {
+    font-size: @fontsize-body;
+    color: @text-disable-black !important;
+}
+.form-control, .select2-container--default .select2-selection--single .select2-selection__rendered, .select2-container {
+    font-size: @fontsize-body;
+    color: @text-primary-black !important;
+    font-family: inherit;
+}
+
+.second-form {
+    ::-webkit-input-placeholder, label, .form-control,
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+        font-size: @fontsize-small;
+    }
+}
+
+
+// 内容行 如果报警详情
+.content-row {
+    text-align: left;
+    label {
+        margin-bottom: @base-interval;
+        margin-right: @base-interval;
+        text-align: right;
+    }
+
+    &:last-of-type {
+        label {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.label-2 {
+    width: @fontsize-body * 2;
+}
+
+.label-3 {
+    width: @fontsize-body * 3;
+}
+
+.label-4 {
+    width: @fontsize-body * 4;
+}
+
+.label-5 {
+    width: @fontsize-body * 5;
+}
+
+.label-6 {
+    width: @fontsize-body * 6;
+}

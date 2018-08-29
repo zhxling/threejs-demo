@@ -1,0 +1,109 @@
+@import "../../../less/variables.less";
+@header-height: 64px;
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background: @menu-top-bg;
+    color: #fff;
+
+    .logo-box {
+        margin-left: 10px;
+        h4 {
+            font-size: 18px;
+            line-height: @header-height;
+        }
+    }
+
+    .nav-first {
+        list-style: none;
+        margin-left: 20px;
+
+        &:before {
+            content: ' ';
+            display: table;
+        }
+
+        li {
+            float: left;
+            position: relative;
+            line-height: 20px;
+            padding: 22px 18px;
+
+            @media (max-width: 1281px) {
+                padding: 22px 10px;
+            }
+
+            @media (max-width: 1201px) {
+                padding: 22px 6px;
+            }
+
+            &.active {
+                background: @menu-top-select-bg;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-top: -5px;
+                    margin-left: -5px;
+                    border-bottom: 5px solid #fff;
+                    border-left: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                }
+            }
+
+            a {
+                color: #fff;
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    ul.header-menus {
+        >li {
+            display: inline-block;
+            margin-left: 20px;
+
+            &.user-info {
+                padding: 12px 10px;
+                vertical-align: middle;
+                [data-toggle="dropdown"], &.dropdown-toggle {
+                    &:hover {
+                        background: darken(@menu-top-bg, 10%);
+                    }
+                }
+            }
+
+            a {
+                color: #96999c;
+            }
+        }
+    }
+}
+
+.no-login-header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color:#e8ecef;
+}
+.time-box {
+    background: #666;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 30px;
+    text-align: center;
+    >div {
+        vertical-align: middle;
+        display: inline-block;
+
+        &:first-of-type {
+            margin: 10px 10px 10px 0px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<div>
+  <ul class="nav-second menu-third-bg">
+    <li ng-repeat="item in vm.systems" class="clearfix">
+      <div class="nav-second-item pull-left {{item.bgClass || 'bg-default'}}">
+        <span>{{item.title}}</span>
+      </div>
+      <ul class="nav-third pull-right bg-third">
+        <li ng-repeat="subSystem in item.subSystems" class="nav-third-item" ng-class="{'right-insert-active-tick menu-left-select': vm.$state.current.name === subSystem.state 
+        || vm.$state.current.data.thirdActiveState === subSystem.state}">
+          <a ui-sref="{{subSystem.state}}{{subSystem.params ? '(' + subSystem.params + ')' : ''}}"><i class="{{subSystem.icon || 'icon-file-text2'}} m-r-sm"></i><span>{{subSystem.title}}</span></a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

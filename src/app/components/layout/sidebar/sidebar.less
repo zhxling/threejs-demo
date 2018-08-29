@@ -1,0 +1,65 @@
+@import "../../../less/variables.less";
+.nav-second {
+    height: calc(~"100vh - 64px");
+    overflow: auto;
+    position: fixed;
+    top:64px;
+    z-index: 1001;
+
+    >li {
+        position: relative;
+        .nav-second-item {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            padding: 5px 10px 4px;
+            font-size: 16px;
+            text-align: center;
+            border-bottom: 1px solid #ededed;
+
+            span {
+                position: absolute;
+                width: 32px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    
+        .nav-third-item {
+            position: relative;
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            margin-left: 40px;
+            text-align: center;
+            border-bottom: 1px solid #ededed;
+            border-left: 1px solid #ededed;
+            border-right: 1px solid #ededed;
+
+            &.right-insert-active-tick:before {
+                content: "";
+                position: absolute;
+                right: -1px;
+                top: 50%;
+                transform: translateY(-50%);
+                border-right: 5px solid #fff;
+                border-top: 5px solid transparent;
+                border-bottom: 5px solid transparent
+            }
+    
+            a {
+                color: @text-primary-white;
+
+                span {
+                    display: inline-block;
+                    min-width: 64px;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
