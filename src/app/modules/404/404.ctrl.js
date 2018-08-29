@@ -1,7 +1,5 @@
 import * as THREE from "three";
 window.THREE = THREE;
-window.FBXLoader = null;
-require('three-fbx-loader');
 require('three/examples/js/controls/OrbitControls')
 require('three/examples/js/renderers/Projector')
 import Stats from 'three/examples/js/libs/stats.min.js';

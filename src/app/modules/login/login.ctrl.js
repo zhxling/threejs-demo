@@ -1,6 +1,6 @@
 import * as THREE from "three";
 window.THREE = THREE;
-window.FBXLoader = null;
+
 require('three-fbx-loader');
 require('three/examples/js/controls/OrbitControls')
 
@@ -75,7 +75,7 @@ class loginController {
      * 加载模型
      */
     loadModel() {
-        let _FBXLoader = new FBXLoader();
+        let _FBXLoader = new THREE.FBXLoader();
         _FBXLoader.load('./assets/images/J6.FBX', (object3d) => {
             this.scene.add(object3d);
 
