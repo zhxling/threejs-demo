@@ -80,6 +80,7 @@
     "daterangepicker": "^2.1.27",
     "eve": "^0.5.4",
     "footable": "^2.0.6",
+    "gsap": "^2.0.2",
     "highcharts": "^6.1.0",
     "jquery": "^3.2.1",
     "metismenu": "^2.7.0",
