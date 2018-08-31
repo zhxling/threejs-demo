@@ -19,6 +19,8 @@ class FireworksCtrl {
 
         this.t1 = new Date().getTime(); 
         this.clock = new THREE.Clock();
+        this.speed = 80;
+        this.riseDurtime = 1.8;
         this.delta = null;
 
         this.init();
@@ -60,8 +62,8 @@ class FireworksCtrl {
         this.scene.add(this.group);
 
         // 创建一个球形用作最后的形状
-        let geometry = new THREE.SphereGeometry(500, 32, 32);
-        const vlen = geometry.vertices.length;
+        this.geometry = new THREE.SphereGeometry(500, 32, 32);
+        const vlen = this.geometry.vertices.length;
 
         let particle;
         for(let i =0; i<vlen; i++) {
@@ -80,35 +82,6 @@ class FireworksCtrl {
             particle.position.y = -500;
             particle.position.z =0;
             particle.scale.x = particle.scale.y = Math.random() * 6 + 3;
-
-            // 为每个点加动画
-            let timerandom = 1 * Math.random();
-
-            TweenMax.to(
-                particle.position,
-                timerandom,
-                {
-                    x: geometry.vertices[i].x + ((0.5 - Math.random()) * 100),
-                    y: geometry.vertices[i].y + ((0.5 - Math.random())*100),
-                    z: geometry.vertices[i].z + (Math.random()*100),
-                    delay:1.8,
-                }
-            )
-
-
-            TweenMax.to(
-                particle.position,
-                timerandom,
-                
-                {
-                    y:'-1500',
-                    z:'0',
-                    x: '0',
-                    delay:1.8+timerandom,
-                    ease: Power2.easeIn
-                } 
-            );
-
             this.group.add( particle );
         }
     }
@@ -123,13 +96,69 @@ class FireworksCtrl {
         this.delta = this.delta < 2 ? this.delta : 2;
         let dur = new Date().getTime() - this.t1;
         if (dur < 1800) {
-            let k = 0;
             this.group.traverse(child => {
                 if (child.position.y < 0) {
                     child.position.y += this.delta * speed * Math.random();
                     child.position.x = this.fsin(child.position.y);
                 }	        
             });
+        } else if(!this.runTweenMax) {
+            // 为每个点加动画
+            this.runTweenMax = true;
+            this.maxTimerandom = 0;
+            let index = 0;
+            this.group.traverse(particle => {
+
+                if(this.geometry.vertices[index]) {
+                    let timerandom = 0.5*Math.random() + 0.5;
+                    this.maxTimerandom = Math.max(this.maxTimerandom, timerandom);
+                    TweenMax.to(
+                        particle.position,
+                        timerandom,
+                        {
+                            x: this.geometry.vertices[index].x + ((0.5 - Math.random()) * 50),
+                            y: this.geometry.vertices[index].y + ((0.5 - Math.random()) * 50),
+                            z: this.geometry.vertices[index].z + (Math.random()*50),
+                        }
+                    )
+        
+                    TweenMax.to(
+                        particle.position,
+                        timerandom,                
+                        {
+                            y:'-2000',
+                            z:'300',
+                            delay:timerandom,
+                            ease: Power2.easeIn
+                        } 
+                    );
+                    
+                    TweenMax.to(
+                        particle.position,
+                        0.01,                
+                        {
+                            y:'-500',
+                            z:'0',
+                            x: '0',
+                            delay:timerandom * 2,
+                            onComplete: (timerandom) => {
+                                if(timerandom >= this.maxTimerandom ) {
+                                    setTimeout(() => {
+                                        this.t1 = new Date().getTime();
+                                        this.runTweenMax = false;
+                                    }, 200)
+                                }
+                                
+                            },
+                            onCompleteParams: [timerandom]
+                        } 
+                    );
+                    
+                    index++;
+                }
+                
+            });
+
         }
         this.renderer.render( this.scene, this.camera );
     }
@@ -147,7 +176,7 @@ class FireworksCtrl {
         this.camera.aspect = $(this.container).width() / $(this.container).height();
         this.camera.updateProjectionMatrix();
 
-        this.renderer.setSize( $(this.container).width(), window.innerHeight );
+        this.renderer.setSize( $(this.container).width(), $(this.container).height() );
 
     }
 }
